@@ -1,0 +1,19 @@
+.cart-link {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 100%;
+  padding: 20px;
+  color: rgb(122, 0, 116);
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.303);
+
+  &:hover {
+    color: rgb(88, 0, 84);
+  }
+}
+
+.breadcrumb {
+  background-color: rgb(205, 205, 205) !important;
+  padding: 20px 20px;
+}

@@ -1,0 +1,24 @@
+{{page-title 'Cart'}}
+<main class='container mt-5'>
+  <h1>Shopping Cart</h1>
+  <ol class='breadcrumb'>
+    <li class='breadcrumb-item'><LinkTo @route='index'>Home</LinkTo></li>
+    <li class='breadcrumb-item active'>Shopping Cart</li>
+  </ol>
+  <section class='w-50 ms-auto text-end mb-5'>
+    <div class='row'>
+      <spam class='col'>Subtotal</spam>
+      <spam class='col'>{{this.subtotal}}</spam>
+    </div>
+    <div class='row'>
+      <spam class='col'>Tax</spam>
+      <spam class='col'>{{this.tax}}</spam>
+    </div>
+    <div class='row'>
+      <spam class='col'>Total</spam>
+      <spam class='col'>{{this.total}}</spam>
+    </div>
+  </section>
+  <button type='button' class='btn btn-success float-end'>Buy</button>
+</main>
+{{outlet}}

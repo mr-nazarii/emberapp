@@ -56,3 +56,5 @@ Specify what it takes to deploy your app.
   - [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
 # ember g route clothes
+
+# ember destroy route clothes/index
