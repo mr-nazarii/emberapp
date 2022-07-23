@@ -1,0 +1,7 @@
+{
+  "complierOptions": {
+    "target": "es2015",
+    "experimantalDecorators": true
+  },
+  "exclude": ["node_modules", "dist"]
+}
