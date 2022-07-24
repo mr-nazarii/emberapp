@@ -58,3 +58,5 @@ Specify what it takes to deploy your app.
 # ember g route clothes
 
 # ember destroy route clothes/index
+
+# ember g component product
