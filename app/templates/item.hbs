@@ -1,20 +1,24 @@
 {{page-title 'Item'}}
 <GeneralContainer>
-  <div class='product item-details-page'>
-    <Product::Image />
-    <Product::Details />
+  <div class='product item-details-page {{if this.isZoomed "is-zoomed"}} '>
+    <Product::Image
+      @src={{this.productImage}}
+      @toggleZoom={{this.toggleZoom}}
+    />
+    <Product::Details
+      @isDetails={{true}}
+      @name={{this.model.name}}
+      @price={{this.model.price}}
+      @colors={{this.model.colors}}
+      @color={{this.color}}
+      @onChangeColor={{this.onChangeColor}}
+    />
   </div>
   <h5>Description:</h5>
   <ul>
-    <li>T Shirt</li>
-    <li>Oversized t shirt
-    </li>
-    <li>Standard fit
-    </li>
-    <li>Perfect for the casual day
-    </li>
-    <li>Regular length</li>
-    <li>Short sleeves</li>
+    {{#each this.model.features as |feature|}}
+      <li>{{feature}}</li>
+    {{/each}}
   </ul>
 
 </GeneralContainer>

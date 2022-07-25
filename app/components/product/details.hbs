@@ -1,7 +1,7 @@
 <div class='product__details'>
   {{! Header }}
   <div>
-    <h3>T-Shirt: Ukraine</h3>
+    <h3>T-Shirt: {{@name}}</h3>
     <div class='text-warning'>
       <i class='fa fa-star'></i>
       <i class='fa fa-star'></i>
@@ -11,8 +11,29 @@
     </div>
   </div>
   {{! Section }}
-  <div>
-    <del class='small text-black-50'>$199.90</del>
-    <i class='text-danger fw-bold'>$99.90</i>
+  <div class={{unless @isDetails 'h4'}}>
+    <del class='small text-black-50'>{{currency @price.original}}</del>
+    <i class='text-danger fw-bold'>{{currency @price.current}}</i>
   </div>
+  {{! Color Section }}
+  {{#if @isDetails}}
+    <div class='d-flex justify-content-between align-items-end'>
+      <div>
+        <h5>Colors</h5>
+        <div class='product-colors active-{{@color}}'>
+
+          {{#each @colors as |colorInfo|}}
+            <span
+              class='product-color {{concat "color-" colorInfo.color}}'
+              {{on 'click' (fn @onChangeColor colorInfo.color)}}
+            ></span>
+          {{/each}}
+        </div>
+      </div>
+      <button class='btn btn-info' type="button" {{on 'click' this.addToCart}}><i
+          class='fa-solid fa-basket-shopping mr-1'
+        ></i>Add to Cart</button>
+    </div>
+  {{/if}}
+
 </div>

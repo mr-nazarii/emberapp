@@ -62,3 +62,5 @@ Specify what it takes to deploy your app.
 # ember g component product
 
 # ember g component-class product
+
+# ember g helper currency
